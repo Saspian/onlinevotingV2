@@ -1,0 +1,45 @@
+.jumbo-container {
+  height: 455px;
+  width: 100vw;
+  text-align: center;
+  overflow: hidden;
+}
+.jumbo-container img {
+  display: block;
+  height: auto;
+  max-height: 455px;
+  width: 100vw;
+  object-fit: cover;
+  z-index: 1;
+}
+.jumbo-container .fade {
+  position: absolute;
+  background: #1b3766;
+  max-height: 455px;
+  height: 455px;
+  width: 100vw;
+  object-fit: cover;
+  opacity: 0.8;
+  z-index: 1.1;
+}
+.title {
+  position: absolute;
+  top: 190px;
+  left: 25vw;
+  z-index: 2;
+  margin: auto;
+  text-align: center;
+  width: 50vw;
+}
+.title p {
+  color: rgb(255, 251, 251);
+}
+.title p span {
+  font-style: italic;
+  font-weight: 500;
+}
+.title h1 {
+  font-size: 3vw;
+  color: white;
+  font: 3vw helvetica;
+}

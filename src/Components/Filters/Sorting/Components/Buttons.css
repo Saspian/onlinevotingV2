@@ -1,0 +1,18 @@
+.filter-line {
+  width: 80%;
+  margin: 0px auto;
+}
+.filter-line span {
+  font-size: 10pt;
+}
+.filter-line select {
+  border: none;
+  background: #dcdcdc;
+  padding: 4px;
+  margin: 0px 10px;
+  border-radius: 2px;
+  margin: 10px;
+}
+.filter-line select option {
+  font: bold;
+}

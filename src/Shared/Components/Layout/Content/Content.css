@@ -1,0 +1,7 @@
+.content {
+  margin: 0px auto;
+  height: auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}

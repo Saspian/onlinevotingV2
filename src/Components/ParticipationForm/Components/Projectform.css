@@ -1,0 +1,42 @@
+.form-container {
+  margin: 100px 150px;
+}
+.form-container h1 {
+  text-align: center;
+}
+.form {
+  background: #ffffff;
+  margin: 20px 5px;
+  padding: 20px;
+}
+.form form {
+  text-align: center;
+}
+.form label {
+  display: inline-block;
+  width: 15%;
+  text-align: left;
+  margin: 1px 4vw 0 0;
+}
+.form textarea {
+  width: 70%;
+}
+.form input {
+  width: 70%;
+  line-height: 35px;
+}
+.form button {
+  display: inline-block;
+  border: none;
+  background: #ee4721;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14pt;
+  color: white;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+.form button:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,76 @@
+.signup-overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+.signup-holder {
+  background-color: #f0f0f0; /* Fallback color */
+  /*background-color: rgba(0, 0, 0, 0.4);  Black w/opacity/see-through */
+  color: #000000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 36%;
+  text-align: center;
+  border-radius: 2px;
+}
+.signup {
+  width: 100%;
+  padding: 50px 80px;
+}
+.overlay-off {
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+  color: #ee4721;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.overlay-off:hover {
+  cursor: pointer;
+}
+/*LOGIN PANNEL*/
+.signup .top-line {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.signup .top-line a {
+  text-decoration: none;
+  color: #ee4721;
+  font-weight: bold;
+}
+.signup .top-line a:hover {
+  cursor: pointer;
+}
+.signup .login-btn {
+  border: none;
+  border-radius: 5px;
+  background-color: #ee4721;
+  color: #f0f0f0;
+  width: 100%;
+  padding: 10px 0;
+}
+.signup .login-btn:hover {
+  cursor: pointer;
+}
+.login-fields {
+  margin: 20px 0px;
+}
+.login-fields input {
+  width: 100%;
+  padding: 10px 0;
+  text-indent: 10px;
+}
