@@ -1,0 +1,11 @@
+.searched-result {
+  display: flex;
+  justify-content: space-between;
+}
+.searched-result .video {
+  max-height: 200px;
+}
+.searched-result .iframe {
+  width: 100%;
+  height: 200px;
+}

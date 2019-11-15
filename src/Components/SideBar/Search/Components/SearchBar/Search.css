@@ -19,3 +19,6 @@
   background: #ee4721;
   padding: 10px 15px;
 }
+.searchBar button:hover{
+  cursor: pointer;
+}

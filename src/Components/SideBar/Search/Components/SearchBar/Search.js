@@ -8,12 +8,14 @@ const SearchBar = ({ search, getSearch, updateSearch }) => {
     <div className="searchBar">
       <form onSubmit={getSearch}>
         <input
+          id="search-input"
           type="text"
           value={search}
           onChange={updateSearch}
           placeholder="search"
+          required="required"
         />
-        <button>
+        <button type="submit">
           <i className="fas fa-search"></i>
         </button>
       </form>
@@ -24,7 +26,7 @@ const SearchBar = ({ search, getSearch, updateSearch }) => {
 export default SearchBar;
 
 SearchBar.propTypes = {
-  search: PropTypes.object,
+  search: PropTypes.string,
   getSearch: PropTypes.func,
   updateSearch: PropTypes.func
 };

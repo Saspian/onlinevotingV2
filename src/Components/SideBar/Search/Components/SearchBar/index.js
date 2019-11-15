@@ -1,36 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import getVideoId from 'get-video-id';
 import SearchBar from './Search';
-import Projectviews from '../../../../Projects-view';
+import Projectview from '../../../../Projects-view/Components/Projects-view';
 
 const Search = () => {
   const [projects, setProjects] = useState([]);
   const [search, setSearch] = useState('');
-  const [query, setQuery] = useState('mushroom soup');
+  const [query, setQuery] = useState('');
 
   useEffect(() => {
-    //   getProjects();
-  });
+    getProject();
+  }, [query]);
 
-  const getProjects = async () => {
+  const getProject = async () => {
     const response = await fetch(
       `http://localhost:3001/api/participants/search?q=${query}`
     );
     const data = await response.json();
-    console.log(data.hits);
-    setProjects(data.hits);
+    console.log(data);
+    setProjects(data);
   };
 
   const updateSearch = e => {
     setSearch(e.target.value);
-    // console.log(search);
   };
 
   const getSearch = e => {
     e.preventDefault();
-    setQuery(search);
+    console.log('searched intialized');
+    setQuery(search.replace(/ /g, '+'));
     setSearch('');
   };
+  console.log(`searched item ${query}`, 'query');
 
   return (
     <div>
@@ -40,7 +41,7 @@ const Search = () => {
         search={search}
       />
       {projects.map(project => (
-        <Projectviews
+        <Projectview
           key={project._id}
           id={project._id}
           title={project.pName}

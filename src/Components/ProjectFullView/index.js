@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import ProjectFullViews from './ProjectFullView';
 
 const ProjectController = ({ match }) => {
+  useEffect(() => {
+    getProjects();
+  }, []);
   const [projs, setProjs] = useState([]);
 
   const getProjects = async () => {
@@ -12,21 +15,14 @@ const ProjectController = ({ match }) => {
         `http://localhost:3001/api/participants/registeredparticipants/${match.params.id}`
       );
       const data = await getProject.json();
-      // eslint-disable-next-line no-debugger
-      // debugger;
-      // setProj(prevProj => [...prevProj, data]);
       setProjs(data);
-      return data;
     } catch (err) {
       console.log(err);
-      return err;
     }
   };
-  useEffect(() => {
-    getProjects();
-  }, []);
 
   console.log(projs, '@@');
+  console.log(projs.vDemo, 'videoid');
 
   return (
     <div>
@@ -34,7 +30,11 @@ const ProjectController = ({ match }) => {
         key={projs._id}
         id={projs._id}
         title={projs.pName}
-        // vid={getVideoId(projs.vDemo).id}
+        vid={
+          projs && projs.vDemo && projs.vDemo.length
+            ? getVideoId(projs.vDemo).id
+            : ''
+        }
         des={projs.pDesc}
         sub={projs.submittedBy}
         org={projs.cName}

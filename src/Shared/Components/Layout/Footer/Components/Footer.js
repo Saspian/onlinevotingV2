@@ -11,12 +11,12 @@ export default () => {
         <li>FAQ</li>
       </div>
       <div className="footer-socials">
-        <img className="footer-logo" src="images/cLogo.png" />
+        <img className="footer-logo" src="/images/cLogo.png" />
         <a href="mailto:itclub@prime.edu.np">itclub@prime.edu.np</a>
         <div className="socials">
-          <img src="images/fb.png" alt="facebook" />
-          <img src="images/ig.png" alt="facebook" />
-          <img src="images/tw.png" alt="facebook" />
+          <img src="/images/fb.png" alt="facebook" />
+          <img src="/images/ig.png" alt="instagram" />
+          <img src="/images/tw.png" alt="twitter" />
         </div>
       </div>
     </div>

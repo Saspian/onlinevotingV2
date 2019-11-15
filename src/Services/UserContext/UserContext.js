@@ -19,5 +19,5 @@ export const UserProvider = props => {
 };
 
 UserProvider.propTypes = {
-  children: PropTypes.object
+  children: PropTypes.array
 };

@@ -12,9 +12,6 @@ const ProjectsController = () => {
         `http://localhost:3001/api/participants/registeredparticipants`
       );
       const data = await getProject.json();
-      // eslint-disable-next-line no-debugger
-      // debugger;
-      // setProj(prevProj => [...prevProj, data]);
       setProj(data);
       return data;
     } catch (err) {
@@ -30,8 +27,6 @@ const ProjectsController = () => {
   return (
     <div className="leftbar">
       {proj.map(project => (
-        /* <div dangerouslySetInnerHTML={project.embed} /> */
-
         <Projectsview
           key={project._id}
           id={project._id}

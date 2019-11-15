@@ -14,7 +14,7 @@ const Navbar = ({ overlayOn, loggedCheck, logout }) => {
         <div className="nav-links">
           <Link to="/" className="logo">
             <li>
-              <img src="images/cLogo.png" alt="logo" />
+              <img src="/images/cLogo.png" alt="logo" />
               <h3>ICT Meetup v6.0</h3>
             </li>
           </Link>
