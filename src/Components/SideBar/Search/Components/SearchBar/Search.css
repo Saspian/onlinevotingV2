@@ -8,17 +8,17 @@
 .searchBar button {
   border: none;
   padding: 10px;
-  margin: 5px;
   border-radius: 4px;
 }
 .searchBar input {
-  width: 90%;
+  margin-right: 10px;
+  width: 100%;
 }
 .searchBar button {
   color: white;
   background: #ee4721;
   padding: 10px 15px;
 }
-.searchBar button:hover{
+.searchBar button:hover {
   cursor: pointer;
 }

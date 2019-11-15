@@ -8,7 +8,6 @@ const SearchBar = ({ search, getSearch, updateSearch }) => {
     <div className="searchBar">
       <form onSubmit={getSearch}>
         <input
-          id="search-input"
           type="text"
           value={search}
           onChange={updateSearch}

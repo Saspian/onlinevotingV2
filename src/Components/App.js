@@ -11,7 +11,7 @@ import Signup from './Signup/Signup';
 import form from './ParticipationForm';
 import projectfull from './ProjectFullView';
 import ProjectsView from './Projects-view';
-import SearchResult from './SearchedView';
+// import SearchResult from './SearchedView';
 
 //  SHARED COMPONENTS
 import Navbar from '../Shared/Components/Layout/Header/Navbar';
@@ -36,7 +36,7 @@ function App() {
             <Route path="/" exact component={Filters} />
             <Content>
               <Route path="/" exact component={ProjectsView} />
-              <Route path="/searchresult" exact component={SearchResult} />
+              {/* <Route path="/searchresult" exact component={SearchResult} /> */}
               <Route path="/" exact component={Sidebar} />
             </Content>
           </UserProvider>
