@@ -14,12 +14,12 @@
 }
 .jumbo-container .fade {
   position: absolute;
-  background: #1b3766;
+  background: #1a3d79;
   max-height: 455px;
   height: 455px;
   width: 100vw;
   object-fit: cover;
-  opacity: 0.8;
+  opacity: 0.5;
   z-index: 1.1;
 }
 .title {

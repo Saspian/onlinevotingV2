@@ -1,0 +1,17 @@
+.contact {
+  margin: 200px 100px;
+}
+
+.location {
+  display: flex;
+  align-content: center;
+}
+.location p {
+  background: #1b3766;
+  color: white;
+  margin-left: 20px;
+  padding: 20px;
+}
+.location i {
+  margin: 0px 10px 0px 0px;
+}

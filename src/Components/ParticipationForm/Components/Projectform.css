@@ -20,10 +20,17 @@
 }
 .form textarea {
   width: 70%;
+  border: 1px solid gray;
 }
 .form input {
   width: 70%;
   line-height: 35px;
+  border: 1px solid gray;
+}
+.form select {
+  width: 70%;
+  height: 35px;
+  border: 1px solid gray;
 }
 .form button {
   display: inline-block;

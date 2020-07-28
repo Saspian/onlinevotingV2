@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Loginfields = ({ changeHandler3, checkUser }) => {
+  const errorTextColor = {
+    color: 'red'
+  };
   return (
     <div className="login-fields">
       <form onSubmit={checkUser}>
@@ -11,8 +14,10 @@ const Loginfields = ({ changeHandler3, checkUser }) => {
           name="email"
           placeholder="email"
           onChange={changeHandler3}
+          required="required"
         />
         <br />
+        <p id="forLoginError" style={errorTextColor}></p>
         <br />
         <input
           type="password"
@@ -20,8 +25,10 @@ const Loginfields = ({ changeHandler3, checkUser }) => {
           name="password"
           placeholder="Password"
           onChange={changeHandler3}
+          required="required"
         />
         <br />
+        <p id="forLoginError2" style={errorTextColor}></p>
         <br />
         <button type="submit" className="login-btn" onClick="login">
           LOGIN NOW

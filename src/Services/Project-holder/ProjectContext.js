@@ -6,7 +6,9 @@ export const ProjectContext = createContext();
 export const ProjectProvider = props => {
   const [projects, setProjects] = useState({
     pName: '',
+    purl: '',
     pDesc: '',
+    cat: '',
     vDemo: '',
     cName: '',
     submittedBy: '',

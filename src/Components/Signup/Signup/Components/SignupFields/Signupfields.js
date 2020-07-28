@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Signupfields = ({ changeHandler2, submitHandler }) => {
+  const errorTextColor = {
+    color: 'red'
+  };
   return (
     <div className="login-fields">
       <form onSubmit={submitHandler}>
@@ -12,8 +15,9 @@ const Signupfields = ({ changeHandler2, submitHandler }) => {
           placeholder="username"
           onChange={changeHandler2}
           required="required"
-        />{' '}
+        />
         <br />
+        <p id="forSignupError" style={errorTextColor}></p>
         <br />
         <input
           type="text"
@@ -22,8 +26,10 @@ const Signupfields = ({ changeHandler2, submitHandler }) => {
           placeholder="email"
           onChange={changeHandler2}
           required="required"
-        />{' '}
-        <br /> <br />
+        />
+        <br />
+        <p id="forSignupError2" style={errorTextColor}></p>
+        <br />
         <input
           type="password"
           id="psw"
@@ -32,7 +38,9 @@ const Signupfields = ({ changeHandler2, submitHandler }) => {
           onChange={changeHandler2}
           required="required"
         />{' '}
-        <br /> <br />
+        <br />
+        <p id="forSignupError3" style={errorTextColor}></p>
+        <br />
         <input
           type="password"
           id="repsw"
@@ -42,6 +50,7 @@ const Signupfields = ({ changeHandler2, submitHandler }) => {
           required="required"
         />
         <br />
+        <p id="forSignupError4" style={errorTextColor}></p>
         <br />
         <button type="submit" className="login-btn">
           CREATE YOUR ACCOUNT

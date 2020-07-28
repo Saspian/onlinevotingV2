@@ -22,7 +22,7 @@ const Navbar = ({ overlayOn, loggedCheck, logout }) => {
             <li>
               <div className="dropdown">
                 <button className="dropbtn">
-                  <i className="fas fa-user"></i> profile
+                  <i className="fas fa-user"></i> &nbsp; Profile
                 </button>
                 <div className="dropdown-content">
                   <p>{localStorage.getItem('username')}</p>

@@ -1,0 +1,11 @@
+.about {
+  margin: 200px 100px;
+}
+.about p {
+  text-align: justify;
+}
+.about img {
+  max-width: 150px;
+  float: right;
+  margin-left: 20px;
+}

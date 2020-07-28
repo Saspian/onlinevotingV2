@@ -70,6 +70,7 @@
   margin: 20px 0px;
 }
 .login-fields input {
+  border: 1px solid gray;
   width: 100%;
   padding: 10px 0;
   text-indent: 10px;

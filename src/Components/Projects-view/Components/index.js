@@ -54,6 +54,7 @@ const ProjectsController = () => {
           des={project.pDesc}
           sub={project.submittedBy}
           org={project.cName}
+          time={project.createdAt}
         />
       ))}
     </div>

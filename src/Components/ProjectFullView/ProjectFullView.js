@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import '../Projects-view/Components/Projects-view.css';
+import './ProjectFullView.css';
 
-const Projectview = ({ id, title, vid, des, sub, org }) => {
+const Projectview = ({ title, vid, des, sub, org, time, url, updateVote }) => {
   return (
-    <div className="project-view">
+    <div className="project-full-view">
       <div className="video">
         <iframe
           className="iframe bigger"
@@ -19,14 +20,23 @@ const Projectview = ({ id, title, vid, des, sub, org }) => {
           {sub}
         </span>
         <span>
-          <i className="fas fa-clock"></i>30-10-2019
+          <i className="fas fa-clock"></i>
+          {time ? time.substr(0, 10) : 'null'}
         </span>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <span>
           <i className="fas fa-globe-asia"></i>By {org}
         </span>
       </p>
+      <br />
+      Project URL :{' '}
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        {url}
+      </a>
       <p className="desc">{des}</p>
+      <button className="votingBtn" onClick={updateVote}>
+        Vote now
+      </button>
     </div>
   );
 };
@@ -39,5 +49,8 @@ Projectview.propTypes = {
   vid: PropTypes.string,
   des: PropTypes.string,
   sub: PropTypes.string,
-  org: PropTypes.string
+  org: PropTypes.string,
+  time: PropTypes.string,
+  url: PropTypes.string,
+  updateVote: PropTypes.string
 };

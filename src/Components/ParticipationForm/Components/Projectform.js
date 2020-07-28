@@ -5,6 +5,9 @@ import { ProjectContext } from '../../../Services/Project-holder/ProjectContext'
 
 const ProjectForm = ({ changeHandler3, submitProject }) => {
   const projects = useContext(ProjectContext);
+  const errorTextColor = {
+    color: 'red'
+  };
   return (
     <div className="form-container">
       <h1>Project Demonstration</h1>
@@ -22,9 +25,16 @@ const ProjectForm = ({ changeHandler3, submitProject }) => {
             required="required"
           />
           <br />
+          <span id="pNameError" style={errorTextColor}></span>
           <br />
           <label>URL</label>
-          <input type="text" />
+          <input
+            type="text"
+            id="url"
+            name="purl"
+            value={projects.purl}
+            onChange={changeHandler3}
+          />
           <br />
           <br />
           <label>Project Description*</label>
@@ -36,8 +46,30 @@ const ProjectForm = ({ changeHandler3, submitProject }) => {
             value={projects.pDesc}
             onChange={changeHandler3}
             required="required"
-          ></textarea>{' '}
+          ></textarea>
           <br />
+          <span id="pDescError" style={errorTextColor}></span>
+          <br />
+          <label>Categoties*</label>
+          <select
+            name="cat"
+            id="cat"
+            onChange={changeHandler3}
+            required="required"
+          >
+            <option value="" defaultValue={projects.cat}>
+              --Select Categories--
+            </option>
+            <option value="Technology">Technology</option>
+            <option value="Health">Health</option>
+            <option value="Environment">Environment</option>
+            <option value="Economy">Economy</option>
+            <option value="Entertainment">Games and Entertainment</option>
+            <option value="Architecture">Architecture</option>
+            <option value="Arts">Arts and Music</option>
+          </select>
+          <br />
+          <span id="selectError" style={errorTextColor}></span>
           <br />
           <label>Demo* (Youtube)</label>
           <input
@@ -49,8 +81,9 @@ const ProjectForm = ({ changeHandler3, submitProject }) => {
             required="required"
           />
           <br />
+          <span id="vidLinkError" style={errorTextColor}></span>
           <br />
-          <label>College Name</label>
+          <label>College Name*</label>
           <input
             type="text"
             id="cname"
@@ -60,8 +93,9 @@ const ProjectForm = ({ changeHandler3, submitProject }) => {
             required="required"
           />
           <br />
+          <span id="cNameError" style={errorTextColor}></span>
           <br />
-          <label>Sumbited by</label>
+          <label>Sumbitted by*</label>
           <input
             type="text"
             id="subby"
@@ -71,8 +105,9 @@ const ProjectForm = ({ changeHandler3, submitProject }) => {
             required="required"
           />
           <br />
+          <span id="subByError" style={errorTextColor}></span>
           <br />
-          <label>Email</label>
+          <label>Email*</label>
           <input
             type="text"
             id="pEmail"
@@ -82,9 +117,10 @@ const ProjectForm = ({ changeHandler3, submitProject }) => {
             required="required"
           />
           <br />
+          <span id="emailError" style={errorTextColor}></span>
           <br />
           <button type="submit">Submit</button>
-          <button type="submit">Reset</button>
+          {/* <button onClick={resetBtn}>Reset</button> */}
         </form>
       </div>
     </div>
@@ -96,4 +132,5 @@ export default ProjectForm;
 ProjectForm.propTypes = {
   changeHandler3: PropTypes.func,
   submitProject: PropTypes.func
+  // resetBtn: PropTypes.func
 };

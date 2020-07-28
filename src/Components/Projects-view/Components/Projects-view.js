@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Projects-view.css';
 import { Link } from 'react-router-dom';
 
-const Projectview = ({ id, title, vid, des, sub, org }) => {
+const Projectview = ({ id, title, vid, des, sub, org, time }) => {
   return (
     <div className="project-view">
       <div className="video">
@@ -24,14 +24,15 @@ const Projectview = ({ id, title, vid, des, sub, org }) => {
           {sub}
         </span>
         <span>
-          <i className="fas fa-clock"></i>30-10-2019
+          <i className="fas fa-clock"></i>
+          {time.substr(0, 10)}
         </span>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <span>
           <i className="fas fa-globe-asia"></i>By {org}
         </span>
       </p>
-      <p className="desc">{des}</p>
+      <p className="desc">{des.substr(0, 250)} ...</p>
     </div>
   );
 };
@@ -44,5 +45,6 @@ Projectview.propTypes = {
   vid: PropTypes.string,
   des: PropTypes.string,
   sub: PropTypes.string,
-  org: PropTypes.string
+  org: PropTypes.string,
+  time: PropTypes.string
 };

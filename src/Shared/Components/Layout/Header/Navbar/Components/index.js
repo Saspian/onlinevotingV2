@@ -15,6 +15,7 @@ const showLoginPage = () => {
     localStorage.setItem('username', '');
     localStorage.setItem('token', '');
     localStorage.setItem('loggedUserID', '');
+    window.location = '/';
   };
 
   const loggedCheck = () => {
@@ -27,6 +28,7 @@ const showLoginPage = () => {
 
     if (loggedStatus) {
       document.querySelector('.dropbtn').style.display = 'block';
+      document.querySelector('.loginBtn').style.display = 'none';
     }
   };
 

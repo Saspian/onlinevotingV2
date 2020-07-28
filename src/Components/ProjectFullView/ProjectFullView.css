@@ -1,0 +1,41 @@
+.project-full-view {
+  max-width: 80%;
+  margin: 70px auto;
+}
+.project-full-view h6 {
+  font-size: 2vw;
+  margin: 10px 0px;
+}
+.project-full-view a {
+  color: black;
+  text-decoration: none;
+}
+
+.project-full-view span:nth-child(1) {
+  margin: 0px 40px 0px 0px;
+}
+.project-full-view span i {
+  margin-right: 10px;
+}
+.project-full-view p {
+  margin-top: 10px;
+}
+
+.project-full-view button {
+  border: none;
+  font-size: 12pt;
+  margin: 20px 0px;
+}
+.project-full-view .desc {
+  text-align: justify;
+}
+.votingBtn {
+  color: white;
+  padding: 7px;
+  border-radius: 4px;
+  background: #ee4721;
+  text-decoration: none;
+}
+.votingBtn:hover {
+  cursor: pointer;
+}
